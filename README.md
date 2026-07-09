@@ -1,0 +1,1 @@
+# trendcart-growth-intelligence-platform
