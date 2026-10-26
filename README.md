@@ -73,7 +73,6 @@ The following business questions were solved using SQL:
 - Revenue by Product Category
 
 ---
-
 ## Dashboard Preview
 
 ![TrendCart Growth Intelligence Dashboard](images/dashboard.png)
@@ -84,7 +83,7 @@ The following business questions were solved using SQL:
 **Interactive Dashboard:**
 
 ```
-https://public.tableau.com/app/profile/kamala.govindaraju/viz/trendcart/Dashboard2
+[View the interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/kamala.govindaraju/viz/trendcart/Dashboard2)
 ```
 
 ---
