@@ -76,13 +76,7 @@ The following business questions were solved using SQL:
 
 ## Dashboard Preview
 
-<img width="1512" height="982" alt="Screenshot 2026-07-10 at 12 50 39 PM" src="https://github.com/user-attachments/assets/e28a0cfa-4456-4475-8191-e9a6613ebcc2" />
-
-
-```markdown
-![TrendCart Dashboard](images/dashboard.png)
-```
-
+![TrendCart Growth Intelligence Dashboard](images/dashboard.png)
 ---
 
 ## Tableau Public Dashboard
