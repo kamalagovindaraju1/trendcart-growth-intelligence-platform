@@ -95,7 +95,6 @@ https://public.tableau.com/app/profile/kamala.govindaraju/viz/trendcart/Dashboar
 
 ---
 
-
 ## Key Business Insights
 
 *The following findings are based on the TrendCart simulated dataset. Revenue figures refer to delivered orders unless otherwise specified.*
