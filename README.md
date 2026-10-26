@@ -149,6 +149,7 @@ The following findings are based on the supplied analysis of the simulated Trend
 ## Repository Structure
 
 ```text
+
 trendcart-growth-intelligence-platform/
 ├── dashboards/
 ├── data/
@@ -156,11 +157,14 @@ trendcart-growth-intelligence-platform/
 │   ├── dashboard.png
 │   └── README.md
 ├── sql/
-│   └── 01_revenue_analysis.sql
+│   ├── 01_revenue_analysis.sql
+│   ├── 02_customer_analysis.sql
+│   ├── 03_product_analysis.sql
+│   └── 04_growth_kpis.sql
 ├── .gitignore
 ├── LICENSE
 └── README.md
-```
+
 
 *This structure reflects the documented project layout. Verify that each listed file exists in the repository before treating the tree as a complete inventory.*
 
