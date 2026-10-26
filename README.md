@@ -120,19 +120,29 @@ The SQL scripts and Tableau dashboard are separate analytical deliverables. Thei
 
 ## Key Business Insights
 
-The following findings are based on the supplied analysis of the simulated TrendCart dataset. They should be validated against the committed data and updated SQL outputs before being presented as final results. Revenue figures refer to delivered orders unless otherwise specified.
+### 1. Order Performance
+- **Total orders:** 50,000
+- **Delivered orders:** 33,263
+- **Delivery rate:** 66.53%
+- **Delivered order amount:** 208,525,300.68 in the dataset's recorded currency units
 
-1. **Returns and cancellations:** The supplied analysis reports 17.0% returned orders and 16.5% cancelled orders. These statuses represent a substantial share of recorded orders. Investigate return reasons and cancellation causes before recommending operational changes.
+### 2. Order Status Analysis
+- **Delivered:** 33,263 orders
+- **Returned:** 8,485 orders
+- **Cancelled:** 8,252 orders
 
-2. **Category contribution:** Men's Fashion contributes approximately 37% and Women's Fashion approximately 32% of delivered revenue. Together, these categories account for around 69% of delivered revenue, making them important categories to monitor.
+Returned and cancelled orders represent a substantial share of order volume and warrant further investigation.
 
-3. **Repeat purchasing:** The supplied analysis reports that approximately 78% of customers placed more than one order, averaging 2.7 orders per customer. This makes repeat purchasing worth examining, although simulated data cannot establish real-world retention behaviour.
+### 3. Payment Method Analysis
+- Net Banking had the highest observed delivery rate at 66.97%.
+- Debit Card had the lowest observed delivery rate at 66.00%.
+- The difference was 0.97 percentage points. Further analysis is needed before attributing delivery outcomes to payment method.
 
-4. **Revenue concentration:** The supplied analysis reports that the top 20% of customers account for approximately 41% of delivered revenue. This suggests revenue is not overwhelmingly concentrated in a small customer group, so loyalty strategies should be evaluated rather than assuming a VIP-only approach is sufficient.
+### 4. Customer Retention
+The initial customer order-frequency query returned 9,620 repeat customers and 313 one-time customers. These counts should be validated before using the repeat-customer rate as a final KPI.
 
-5. **Order value and trends:** The supplied analysis reports delivered AOV of approximately ₹9,485. Monthly revenue should be compared across complete months; June 2025 is partial because the dataset ends on June 19, 2025.
-
-**Data limitation:** These figures are supplied analytical findings, not independently re-calculated results in this README revision. Validate them against the committed dataset and updated SQL queries before treating them as confirmed outputs.
+### 5. Product Performance
+Product-level and category-level sales analyses are available in `sql/03_product_analysis.sql`. Results should be validated in BigQuery before publishing specific product rankings or category-level claims.
 
 ---
 
