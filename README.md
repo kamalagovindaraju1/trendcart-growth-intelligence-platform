@@ -180,6 +180,9 @@ trendcart-growth-intelligence-platform/
 
 ---
 
+## Dataset Disclaimer
+
+This project uses synthetic e-commerce data created for educational and portfolio demonstration purposes. The dataset does not represent actual customer transactions or the performance of a real business. Business insights are illustrative and are intended to demonstrate SQL-based analysis, KPI development, and growth analytics techniques.
 ## Author
 
 **Kamala Govindaraju**
