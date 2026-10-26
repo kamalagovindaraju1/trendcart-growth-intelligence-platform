@@ -95,15 +95,22 @@ https://public.tableau.com/app/profile/kamala.govindaraju/viz/trendcart/Dashboar
 
 ---
 
+
 ## Key Business Insights
 
-- Men's Fashion generated the highest revenue.
-- Women's Fashion was the second-highest revenue contributor.
-- Average Order Value (AOV) was ₹9,499.
-- Total Revenue exceeded ₹358 million.
-- Payment methods contributed relatively evenly to total revenue.
-- A small group of customers generated a significant share of revenue.
+*The following findings are based on the TrendCart simulated dataset. Revenue figures refer to delivered orders unless otherwise specified.*
 
+1. **Returns and cancellations:** The dataset reports 17.0% returned orders and 16.5% cancelled orders. These statuses represent a substantial share of recorded orders. Investigate return reasons and cancellation causes before recommending operational changes.
+
+2. **Category contribution:** Men's Fashion contributes approximately 37% and Women's Fashion approximately 32% of delivered revenue. Together, these categories account for around 69% of delivered revenue, making them important categories to monitor.
+
+3. **Repeat purchasing:** Approximately 78% of customers placed more than one order, averaging 2.7 orders per customer. This suggests repeat purchasing is worth examining further, although the simulated data cannot establish real-world retention behaviour.
+
+4. **Revenue concentration:** The top 20% of customers account for approximately 41% of delivered revenue. Revenue is not overwhelmingly concentrated among a small customer group, so loyalty strategies should be evaluated rather than assuming a VIP-only approach is sufficient.
+
+5. **Order value and trends:** Delivered average order value is approximately ₹9,485. Monthly revenue should be compared across complete months; June 2025 is partial because the dataset ends on June 19, 2025.
+
+**Data limitation:** TrendCart uses simulated sales data. Patterns in payment methods, customer segments, returns, and purchasing behaviour are illustrative and should not be interpreted as evidence about actual customers or the wider retail market.
 ---
 
 ## Business Recommendations
