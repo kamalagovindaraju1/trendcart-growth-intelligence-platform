@@ -1,9 +1,9 @@
 
 -- TrendCart Growth Intelligence Platform
--- Product performance analysis
+-- Product Performance Analysis
 -- Tool: Google BigQuery
 
--- Query 1: Sales by product, brand, and category
+-- Query 1: Sales by product
 SELECT
   p.product_id,
   p.product_name,
@@ -14,7 +14,7 @@ SELECT
   ROUND(SUM(oi.quantity * oi.selling_price), 2)
     AS product_sales_amount
 FROM `growth-analytics-kamala.growth_analytics.order_items` AS oi
-JOIN `growth-analytics-kamala.growth_analytics.products` AS p
+JOIN `growth-analytics-kamala.growth_analytics.Product` AS p
   ON oi.product_id = p.product_id
 GROUP BY
   p.product_id,
@@ -34,7 +34,7 @@ SELECT
   ROUND(SUM(oi.quantity * oi.selling_price), 2)
     AS product_sales_amount
 FROM `growth-analytics-kamala.growth_analytics.order_items` AS oi
-JOIN `growth-analytics-kamala.growth_analytics.products` AS p
+JOIN `growth-analytics-kamala.growth_analytics.Product` AS p
   ON oi.product_id = p.product_id
 GROUP BY
   p.product_id,
@@ -45,7 +45,7 @@ ORDER BY product_sales_amount DESC
 LIMIT 10;
 
 
--- Query 3: Sales summary by category
+-- Query 3: Sales by category
 SELECT
   p.category,
   SUM(oi.quantity) AS units_sold,
@@ -53,7 +53,7 @@ SELECT
     AS category_sales_amount,
   COUNT(DISTINCT oi.product_id) AS unique_products_sold
 FROM `growth-analytics-kamala.growth_analytics.order_items` AS oi
-JOIN `growth-analytics-kamala.growth_analytics.products` AS p
+JOIN `growth-analytics-kamala.growth_analytics.Product` AS p
   ON oi.product_id = p.product_id
 GROUP BY p.category
 ORDER BY category_sales_amount DESC;
