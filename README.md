@@ -2,46 +2,63 @@
 
 ## Project Summary
 
-The TrendCart Growth Intelligence Platform is an end-to-end e-commerce analytics project developed using **Google BigQuery, SQL, Tableau Public, and GitHub**. The project analyzes over **55,000 customer transactions** to uncover revenue trends, customer purchasing behavior, product performance, and payment preferences. An executive dashboard was created to help business stakeholders monitor key performance indicators (KPIs) and support data-driven decision-making.
+The TrendCart Growth Intelligence Platform is an e-commerce analytics portfolio project developed using **Google BigQuery, SQL, Tableau Public, and GitHub**. It analyzes a simulated dataset containing over **55,000 transaction records** to explore revenue trends, customer purchasing behaviour, product performance, and order outcomes.
+
+The project combines SQL-based business analysis with an executive dashboard to demonstrate how data can be used to monitor key performance indicators (KPIs) and support business decision-making.
+
+**Important:** The dataset is simulated. Findings are illustrative and should not be interpreted as verified real-world retail behaviour.
 
 ---
 
 ## Business Problem
 
-TrendCart, a growing e-commerce retailer, has experienced fluctuations in revenue despite increasing customer activity. The business requires a centralized analytics solution to:
+The project explores how an e-commerce business can use analytics to:
 
-- Monitor revenue performance
-- Understand customer purchasing behavior
-- Identify high-performing products and categories
-- Analyze payment preferences
-- Support executive decision-making
+- Monitor revenue and order performance.
+- Understand customer purchasing behaviour.
+- Identify high-performing product categories and products.
+- Examine order statuses, including returns and cancellations.
+- Support data-informed business recommendations.
+
+TrendCart is a simulated business scenario created for analytical practice, not a verified real retailer.
 
 ---
 
 ## Objectives
 
-- Analyze monthly revenue trends
-- Calculate Total Revenue, Total Orders, Total Customers, and Average Order Value (AOV)
-- Identify top-performing product categories
-- Analyze payment method performance
-- Identify the top 10 products
-- Identify the top 10 customers
-- Build an executive Tableau dashboard
+- Analyze monthly revenue trends.
+- Calculate revenue, order counts, and average order value (AOV).
+- Identify high-performing product categories and brands.
+- Analyze revenue by payment method.
+- Identify the top 10 products and customers by revenue.
+- Examine order statuses and delivered-order performance.
+- Build an executive Tableau dashboard.
 
 ---
 
 ## Dataset
 
-The project uses a simulated e-commerce dataset containing:
+The project uses a simulated e-commerce dataset organized into the following tables:
 
 | Table | Description |
-|-------|-------------|
-| Customers | Customer information |
-| Orders | Order details |
-| Order Items | Product-level sales |
-| Products | Product catalog |
+|---|---|
+| Customers | Customer information, segments, and state |
+| Orders | Order dates, order status, payment method, and customer identifiers |
+| Order Items | Product-level selling prices and quantities |
+| Products | Product names, categories, and brands |
 
-**Dataset Size:** 55,219+ transactions
+**Dataset size:** 55,219+ transaction records, as documented for the project.
+
+**Data status:** Simulated data used for portfolio and analytical practice. The original data-generation method has not been independently verified.
+
+### Metric Definitions
+
+- **Gross sales:** Sales calculated across the included order statuses, before excluding returns and cancellations.
+- **Delivered-order revenue:** Revenue calculated from orders with `order_status = 'Delivered'`.
+- **Delivered orders:** Distinct orders marked as `Delivered`.
+- **Delivered average order value (AOV):** Delivered-order revenue divided by the number of distinct delivered orders.
+
+Revenue is calculated using selling price multiplied by quantity. Refunds and partial returns are not deducted unless corresponding refund data and calculation logic are available.
 
 ---
 
@@ -56,62 +73,76 @@ The project uses a simulated e-commerce dataset containing:
 
 ## SQL Analysis
 
-The following business questions were solved using SQL:
+The file `sql/01_revenue_analysis.sql` contains 12 business analysis queries.
 
 ### Revenue Analysis
-- Monthly Revenue Trend
-- Revenue by Category
-- Revenue by Payment Method
+
+- Monthly delivered revenue
+- Revenue by product category
+- Revenue by payment method
+- Average order value (AOV)
+- Revenue by customer segment
+- Revenue by brand
+- Revenue by state
 
 ### Customer Analysis
-- Total Customers
-- Average Order Value (AOV)
-- Top 10 Customers
+
+- Order counts by status
+- Monthly delivered-order counts
+- Top 10 customers by delivered revenue
 
 ### Product Analysis
-- Top 10 Products
-- Revenue by Product Category
+
+- Top 10 products by delivered revenue
+- Top 10 products by quantity sold
+
+Revenue-related queries filter for `Delivered` orders where appropriate. The order-status analysis includes all statuses to support the examination of returns and cancellations.
+
+The SQL scripts and Tableau dashboard are separate analytical deliverables. Their outputs should not be assumed to match unless their data sources, reporting periods, and metric definitions have been verified.
 
 ---
+
 ## Dashboard Preview
 
 ![TrendCart Growth Intelligence Dashboard](images/dashboard.png)
+
+*Note: The current dashboard screenshot displays gross sales metrics, including approximately ₹358.08M in revenue and 37,698 orders. These are not delivered-order figures. The SQL analysis separately calculates delivered-order metrics, so the figures should not be compared directly without aligning their definitions.*
+
 ---
 
 ## Tableau Public Dashboard
 
-**Interactive Dashboard:**
+**[View the interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/kamala.govindaraju/viz/trendcart/Dashboard2)**
 
-```
-[View the interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/kamala.govindaraju/viz/trendcart/Dashboard2)
-```
+*If the dashboard is unavailable, verify the published URL and its public-access settings.*
 
 ---
 
 ## Key Business Insights
 
-*The following findings are based on the TrendCart simulated dataset. Revenue figures refer to delivered orders unless otherwise specified.*
+The following findings are based on the supplied analysis of the simulated TrendCart dataset. They should be validated against the committed data and updated SQL outputs before being presented as final results. Revenue figures refer to delivered orders unless otherwise specified.
 
-1. **Returns and cancellations:** The dataset reports 17.0% returned orders and 16.5% cancelled orders. These statuses represent a substantial share of recorded orders. Investigate return reasons and cancellation causes before recommending operational changes.
+1. **Returns and cancellations:** The supplied analysis reports 17.0% returned orders and 16.5% cancelled orders. These statuses represent a substantial share of recorded orders. Investigate return reasons and cancellation causes before recommending operational changes.
 
 2. **Category contribution:** Men's Fashion contributes approximately 37% and Women's Fashion approximately 32% of delivered revenue. Together, these categories account for around 69% of delivered revenue, making them important categories to monitor.
 
-3. **Repeat purchasing:** Approximately 78% of customers placed more than one order, averaging 2.7 orders per customer. This suggests repeat purchasing is worth examining further, although the simulated data cannot establish real-world retention behaviour.
+3. **Repeat purchasing:** The supplied analysis reports that approximately 78% of customers placed more than one order, averaging 2.7 orders per customer. This makes repeat purchasing worth examining, although simulated data cannot establish real-world retention behaviour.
 
-4. **Revenue concentration:** The top 20% of customers account for approximately 41% of delivered revenue. Revenue is not overwhelmingly concentrated among a small customer group, so loyalty strategies should be evaluated rather than assuming a VIP-only approach is sufficient.
+4. **Revenue concentration:** The supplied analysis reports that the top 20% of customers account for approximately 41% of delivered revenue. This suggests revenue is not overwhelmingly concentrated in a small customer group, so loyalty strategies should be evaluated rather than assuming a VIP-only approach is sufficient.
 
-5. **Order value and trends:** Delivered average order value is approximately ₹9,485. Monthly revenue should be compared across complete months; June 2025 is partial because the dataset ends on June 19, 2025.
+5. **Order value and trends:** The supplied analysis reports delivered AOV of approximately ₹9,485. Monthly revenue should be compared across complete months; June 2025 is partial because the dataset ends on June 19, 2025.
 
-**Data limitation:** TrendCart uses simulated sales data. Patterns in payment methods, customer segments, returns, and purchasing behaviour are illustrative and should not be interpreted as evidence about actual customers or the wider retail market.
+**Data limitation:** These figures are supplied analytical findings, not independently re-calculated results in this README revision. Validate them against the committed dataset and updated SQL queries before treating them as confirmed outputs.
+
 ---
 
 ## Business Recommendations
 
-- Increase marketing investment in high-performing product categories.
-- Launch customer loyalty campaigns for top customers.
-- Optimize low-performing product categories.
-- Monitor monthly revenue trends to identify seasonal patterns.
-- Continue tracking payment preferences to improve customer experience.
+- **Review returns and cancellations:** Investigate the reasons for returned and cancelled orders before recommending operational changes.
+- **Monitor category performance:** Track Men's Fashion and Women's Fashion as major contributors to delivered revenue.
+- **Evaluate retention initiatives:** Explore loyalty campaigns and repeat-purchase incentives, then measure their effectiveness using defined KPIs or controlled experiments.
+- **Compare complete reporting periods:** Use full months for trend comparisons and clearly label June 2025 as a partial month.
+- **Validate before acting:** Treat patterns in simulated data as analytical exercises, not confirmed evidence of real customer preferences, payment behaviour, or market demand.
 
 ---
 
@@ -122,6 +153,8 @@ trendcart-growth-intelligence-platform/
 ├── dashboards/
 ├── data/
 ├── images/
+│   ├── dashboard.png
+│   └── README.md
 ├── sql/
 │   └── 01_revenue_analysis.sql
 ├── .gitignore
@@ -129,24 +162,7 @@ trendcart-growth-intelligence-platform/
 └── README.md
 ```
 
-### SQL Analysis
-
-The file `sql/01_revenue_analysis.sql` contains 12 business analysis queries covering:
-
-1. Monthly delivered revenue
-2. Revenue by product category
-3. Revenue by payment method
-4. Average order value (AOV)
-5. Order counts by status
-6. Monthly delivered order counts
-7. Revenue by customer segment
-8. Top 10 products by delivered revenue
-9. Top 10 customers by delivered revenue
-10. Revenue by brand
-11. Revenue by state
-12. Top 10 products by quantity sold
-
-Revenue-related queries use the `Delivered` order status filter. The order-status query includes all statuses to support return and cancellation analysis.
+*This structure reflects the documented project layout. Verify that each listed file exists in the repository before treating the tree as a complete inventory.*
 
 ---
 
@@ -155,3 +171,8 @@ Revenue-related queries use the `Delivered` order status filter. The order-statu
 **Kamala Govindaraju**
 
 Growth Analytics | SQL | Google BigQuery | Tableau Public | Marketing Analytics
+
+- **GitHub:** [View my projects](https://github.com/kamalagovindaraju1)
+- **LinkedIn:** [Connect with me](https://www.linkedin.com/in/kamalagovindaraju/)
+- **Substack:** [Read my case studies](https://kamalagovindaraju.substack.com/)
+- **Tableau Public:** [Explore my dashboards](https://public.tableau.com/app/profile/kamala.govindaraju)
