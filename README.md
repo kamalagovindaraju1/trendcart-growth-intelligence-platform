@@ -124,25 +124,36 @@ https://public.tableau.com/app/profile/kamala.govindaraju/viz/trendcart/Dashboar
 
 ## Repository Structure
 
-```
+```text
 trendcart-growth-intelligence-platform/
-│
-├── sql/
-│   ├── 01_revenue_analysis.sql
-│   ├── 02_customer_analysis.sql
-│   ├── 03_product_analysis.sql
-│
 ├── dashboards/
-│   └── trendcart_dashboard.twb
-│
-├── images/
-│   └── dashboard.png
-│
 ├── data/
-│   └── README.md
-│
+├── images/
+├── sql/
+│   └── 01_revenue_analysis.sql
+├── .gitignore
+├── LICENSE
 └── README.md
 ```
+
+### SQL Analysis
+
+The file `sql/01_revenue_analysis.sql` contains 12 business analysis queries covering:
+
+1. Monthly delivered revenue
+2. Revenue by product category
+3. Revenue by payment method
+4. Average order value (AOV)
+5. Order counts by status
+6. Monthly delivered order counts
+7. Revenue by customer segment
+8. Top 10 products by delivered revenue
+9. Top 10 customers by delivered revenue
+10. Revenue by brand
+11. Revenue by state
+12. Top 10 products by quantity sold
+
+Revenue-related queries use the `Delivered` order status filter. The order-status query includes all statuses to support return and cancellation analysis.
 
 ---
 
