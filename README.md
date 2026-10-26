@@ -110,15 +110,15 @@ The SQL scripts and Tableau dashboard are separate analytical deliverables. Thei
 
 ---
 
-Interactive Tableau Dashboard
+## Interactive Tableau Dashboard
 
 Explore the published dashboard:
 
-View TrendCart Growth Intelligence Dashboard on Tableau Public
+**[View TrendCart Growth Intelligence Dashboard on Tableau Public](https://public.tableau.com/views/trendcart/Dashboard2?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
 The dashboard presents order performance, revenue trends, category and payment-method comparisons, and top products and customers.
 
-Dataset: Synthetic e-commerce data created for educational and portfolio demonstration purposes.
+**Dataset:** Synthetic e-commerce data created for educational and portfolio demonstration purposes.
 
 ---
 
