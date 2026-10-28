@@ -104,7 +104,7 @@ The SQL scripts and Tableau dashboard are separate analytical deliverables. Thei
 
 ## Dashboard Preview
 
-![TrendCart Growth Intelligence Dashboard](images/dashboard.png)
+![TrendCart Growth Intelligence Dashboard]()
 
 *Note: The current dashboard screenshot displays gross sales metrics, including approximately ₹358.08M in revenue and 37,698 orders. These are not delivered-order figures. The SQL analysis separately calculates delivered-order metrics, so the figures should not be compared directly without aligning their definitions.*
 
@@ -114,7 +114,7 @@ The SQL scripts and Tableau dashboard are separate analytical deliverables. Thei
 
 Explore the published dashboard:
 
-**[View TrendCart Growth Intelligence Dashboard on Tableau Public](https://public.tableau.com/views/trendcart/Dashboard2?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
+[View TrendCart Growth Intelligence Dashboard on Tableau Public](https://public.tableau.com/app/profile/kamala.govindaraju/viz/TrendsCart/Dashboard2)
 
 The dashboard presents order performance, revenue trends, category and payment-method comparisons, and top products and customers.
 
