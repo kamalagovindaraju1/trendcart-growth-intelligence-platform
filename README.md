@@ -102,23 +102,31 @@ The SQL scripts and Tableau dashboard are separate analytical deliverables. Thei
 
 ---
 
-## Dashboard Preview
-
-![TrendCart Growth Intelligence Dashboard]()
-
-*Note: The current dashboard screenshot displays gross sales metrics, including approximately ₹358.08M in revenue and 37,698 orders. These are not delivered-order figures. The SQL analysis separately calculates delivered-order metrics, so the figures should not be compared directly without aligning their definitions.*
-
----
-
 ## Interactive Tableau Dashboard
 
 Explore the published dashboard:
 
 [View TrendCart Growth Intelligence Dashboard on Tableau Public](https://public.tableau.com/app/profile/kamala.govindaraju/viz/TrendsCart/Dashboard2)
 
-The dashboard presents order performance, revenue trends, category and payment-method comparisons, and top products and customers.
+### Dashboard Components
 
-**Dataset:** Synthetic e-commerce data created for educational and portfolio demonstration purposes.
+- **Executive KPIs:** Total Orders, Delivery Rate, Delivered Orders, and Returned Orders.
+- **Monthly Revenue Trend:** Monthly sales performance over time.
+- **Order Status Breakdown:** Delivered, returned, and cancelled orders.
+- **Top 10 Products by Revenue:** Products ranked by calculated product revenue.
+- **Payment Method Analysis:** Order distribution across payment methods.
+
+### Key Metrics
+
+| Metric | Result |
+|---|---:|
+| Total Orders | 50,000 |
+| Delivered Orders | 33,263 |
+| Delivery Rate | 66.53% |
+| Returned Orders | 8,485 |
+| Cancelled Orders | 8,252 |
+
+**Data disclaimer:** This project uses synthetic e-commerce data for educational and portfolio purposes. Findings are illustrative and do not represent verified real-world business performance.
 
 ---
 
