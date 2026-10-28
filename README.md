@@ -168,6 +168,21 @@ Product-level and category-level sales analyses are available in `sql/03_product
 
 ---
 
+### Dataset Disclaimer
+
+This project uses synthetic e-commerce data created for educational and portfolio demonstration purposes. The dataset does not represent actual customer transactions or the performance of a real business. Business insights are illustrative and are intended to demonstrate SQL-based analysis, KPI development, and growth analytics techniques.
+## Author
+
+**Kamala Govindaraju**
+
+Growth Analytics | SQL | Google BigQuery | Tableau Public | Marketing Analytics
+
+- **GitHub:** [View my projects](https://github.com/kamalagovindaraju1)
+- **LinkedIn:** [Connect with me](https://www.linkedin.com/in/kamalagovindaraju/)
+- **Substack:** [Read my case studies](https://kamalagovindaraju.substack.com/)
+- **Tableau Public:** [Explore my dashboards](https://public.tableau.com/app/profile/kamala.govindaraju)
+
+---
 ## Repository Structure
 
 ```text
@@ -190,18 +205,4 @@ trendcart-growth-intelligence-platform/
 
 *This structure reflects the documented project layout. Verify that each listed file exists in the repository before treating the tree as a complete inventory.*
 
----
 
-## Dataset Disclaimer
-
-This project uses synthetic e-commerce data created for educational and portfolio demonstration purposes. The dataset does not represent actual customer transactions or the performance of a real business. Business insights are illustrative and are intended to demonstrate SQL-based analysis, KPI development, and growth analytics techniques.
-## Author
-
-**Kamala Govindaraju**
-
-Growth Analytics | SQL | Google BigQuery | Tableau Public | Marketing Analytics
-
-- **GitHub:** [View my projects](https://github.com/kamalagovindaraju1)
-- **LinkedIn:** [Connect with me](https://www.linkedin.com/in/kamalagovindaraju/)
-- **Substack:** [Read my case studies](https://kamalagovindaraju.substack.com/)
-- **Tableau Public:** [Explore my dashboards](https://public.tableau.com/app/profile/kamala.govindaraju)
